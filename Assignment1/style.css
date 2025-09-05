@@ -1,0 +1,179 @@
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  border-bottom: 1px solid #ddd;
+  height: 5rem;
+  margin-top: 0.8rem;
+}
+
+
+.header-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #7b5e0e;
+}
+
+.menu-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.menu-title a {
+  font-size: 1.1rem;
+  margin-right: 1.5rem;
+  color: #033049;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu-title a:hover {
+  color: #2a9fd6;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem 0;
+  justify-content: center;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex: 2;
+  min-width: 50%;
+  height: 100%;
+  justify-content: flex-start;
+}
+
+.product-item {
+  width: 220px;  
+  height: auto;  
+  border-radius: 8px;
+  text-align: center;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.product-image {
+  width: 200px;   
+  height: 250px; 
+  border-radius: 6px;
+  object-fit: cover; 
+}
+
+.product-item h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.price {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2a9fd6;
+}
+
+.price-discount {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: #888;
+  text-decoration: line-through;
+}
+
+.add-to-cart {
+  display: inline-block;
+  background-color: #2a9fd6;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+
+.sub-container {
+  background-image: url("Sanpham.jpg");
+  background-size: cover;
+  background-position: center;
+  flex: 2;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 400px;
+  position: relative;
+  height: auto;
+  margin-right: 2rem;
+}
+
+.layout {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.sub-title {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sub-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  border: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sub-button:hover {
+  background-color: #3a8d3f;
+  transform: scale(1.05);
+}
+
+
