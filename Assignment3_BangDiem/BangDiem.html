@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điểm</title>
+    <link rel="stylesheet" href="BangDiem.css">
+</head>
+<body>
+    <div class="form-box">
+        <h2>BANG DIEM CUA EM</h2>
+
+        <div class="row">
+            <label for="text1">Semester1 </label>
+            <input type="text" id="text1">
+        </div>
+
+        <div class="row">
+            <label for="text2">Semester2 </label>
+            <input type="text" id="text2">
+        </div>
+
+        <div class="row">
+            <label for="select">Year:</label>
+            <select id="select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="result">Summarise:</label>
+            <input type="text" id="result" readonly>
+        </div>
+
+        <p id="kq">Bang Diem Cua Em</p>
+
+        <div class="buttons">
+            <button onclick="myFunction()">OK</button>
+            <button onclick="resetForm()">Cancel</button>
+        </div>
+    </div>
+    <script src="BangDiem.js"></script>
+</body>
+</html>
