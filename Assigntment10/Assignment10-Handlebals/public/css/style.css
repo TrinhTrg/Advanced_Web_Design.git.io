@@ -1,0 +1,105 @@
+/* ==== Reset cơ bản ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f9fb;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==== Header ==== */
+header {
+  background-color: #1e90ff;
+  color: white;
+  padding: 1.2rem 0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ==== Navigation ==== */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffdd57;
+}
+
+/* ==== Main content ==== */
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+main h2 {
+  color: #1e90ff;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+main p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ==== Footer ==== */
+footer {
+  background-color: #1e90ff;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* ==== Links inside content ==== */
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  main {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
