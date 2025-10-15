@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BetaDesign &mdash; <%= product.name %></title>
+	<link href='http://fonts.googleapis.com/css?family=Dosis:300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/dest/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/dest/vendors/colorbox/example3/colorbox.css">
+	<link rel="stylesheet" title="style" href="/assets/dest/css/style.css">
+	<link rel="stylesheet" href="/assets/dest/css/animate.css">
+	<link rel="stylesheet" title="style" href="/assets/dest/css/huong-style.css">
+	
+</head>
+
+<body>
+
+	<div id="header">
+		
+		
+				<div class="clearfix"></div>
+			</div>
+			 <div class="header-body">
+			
+				<div class="pull-right beta-components space-left ov">
+					<div class="space10">&nbsp;</div>
+					<div class="beta-comp">
+						
+					</div>
+
+					
+
+				</div>
+				<div class="clearfix"></div>
+			</div> </div> <div class="header-bottom" style="background-color: #0277b8;">
+			<div class="container">
+				<a class="visible-xs beta-menu-toggle pull-right" href="#"><span class='beta-menu-toggle-text'>Menu</span> <i class="fa fa-bars"></i></a>
+				<div class="visible-xs clearfix"></div>
+			
+			</div> </div> </div> <div class="inner-header">
+		<div class="container">
+			<div class="pull-left">
+				<h6 class="inner-title">Product</h6>
+			</div>
+			<div class="pull-right">
+				<div class="beta-breadcrumb font-large">
+					<a href="/">Home</a> / <span>Product</span> / <span><%= product.name %></span>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div id="content">
+			<div class="row">
+				<div class="col-sm-9">
+
+					<div class="row">
+						<div class="col-sm-4">
+							<img src="/image/product/<%= product.image %>" alt="<%= product.name %>">
+						</div>
+						<div class="col-sm-8">
+							<div class="single-item-body">
+								<p class="single-item-title"><%= product.name %></p>
+								
+								<p class="single-item-price">
+								  <% if (product.promotion_price && product.promotion_price < product.unit_price) { %>
+									  <span class="flash-del">$<%= product.unit_price %></span>
+									  <span class="flash-sale">$<%= product.promotion_price %></span>
+								  <% } else { %>
+									  <span>$<%= product.unit_price %></span>
+								  <% } %>
+								</p>
+							</div>
+
+							<div class="clearfix"></div>
+							<div class="space20">&nbsp;</div>
+
+							<div class="single-item-desc">
+								<p><%= product.description %></p>
+							</div>
+							<div class="space20">&nbsp;</div>
+							
+							<div>
+							  <p><b>Thông tin sản phẩm:</b></p>
+							  <% if (product.idType && product.idType.name) { %>
+								<span style="margin-right:15px;">Loại: <b><%= product.idType.name %></b></span>
+							  <% } %>
+							  <span>Đơn vị: <b><%= product.unit || 'piece' %></b></span>
+							</div>
+
+							<div class="space20">&nbsp;</div>
+							
+							<div class="single-item-options">
+								<button class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</button>
+								<button class="beta-btn" style="background:#eaf0fd; color:#2673dd; margin-left: 10px;"><i class="fa fa-heart"></i> Yêu thích</button>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="space40">&nbsp;</div>
+					<div class="woocommerce-tabs">
+						<ul class="tabs">
+							<li><a href="#tab-description">Description</a></li>
+							<li><a href="#tab-reviews">Reviews (0)</a></li>
+						</ul>
+
+						<div class="panel" id="tab-description">
+							<% if (product.description) { %>
+								<p><%= product.description %></p>
+							<% } else { %>
+								<p>No description available.</p>
+							<% } %>
+						</div>
+						<div class="panel" id="tab-reviews">
+							<p>No Reviews</p>
+						</div>
+					</div>
+					<div class="space50">&nbsp;</div>
+					<div class="beta-products-list">
+						<h4>Related Products</h4>
+
+						<div class="row">
+							<div class="col-sm-4">
+								<div class="single-item">
+									<div class="single-item-header">
+										<a href="#"><img src="/assets/dest/images/products/4.jpg" alt=""></a>
+									</div>
+									<div class="single-item-body">
+										<p class="single-item-title">Sample Woman Top</p>
+										<p class="single-item-price">
+											<span>$34.55</span>
+										</p>
+									</div>
+									<div class="single-item-caption">
+										<a class="add-to-cart pull-left" href="#"><i class="fa fa-shopping-cart"></i></a>
+										<a class="beta-btn primary" href="#">Details <i class="fa fa-chevron-right"></i></a>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="single-item">
+									<div class="single-item-header">
+										<a href="#"><img src="/assets/dest/images/products/5.jpg" alt=""></a>
+									</div>
+									<div class="single-item-body">
+										<p class="single-item-title">Sample Woman Top</p>
+										<p class="single-item-price">
+											<span>$34.55</span>
+										</p>
+									</div>
+									<div class="single-item-caption">
+										<a class="add-to-cart pull-left" href="#"><i class="fa fa-shopping-cart"></i></a>
+										<a class="beta-btn primary" href="#">Details <i class="fa fa-chevron-right"></i></a>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="single-item">
+									<div class="ribbon-wrapper"><div class="ribbon sale">Sale</div></div>
+									<div class="single-item-header">
+										<a href="#"><img src="/assets/dest/images/products/6.jpg" alt=""></a>
+									</div>
+									<div class="single-item-body">
+										<p class="single-item-title">Sample Woman Top</p>
+										<p class="single-item-price">
+											<span class="flash-del">$34.55</span>
+											<span class="flash-sale">$33.55</span>
+										</p>
+									</div>
+									<div class="single-item-caption">
+										<a class="add-to-cart pull-left" href="#"><i class="fa fa-shopping-cart"></i></a>
+										<a class="beta-btn primary" href="#">Details <i class="fa fa-chevron-right"></i></a>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> </div>
+				<div class="col-sm-3 aside">
+					<div class="widget">
+						<h3 class="widget-title">Best Sellers</h3>
+						<div class="widget-body">
+							<div class="beta-sales beta-lists">
+								</div>
+						</div>
+					</div> <div class="widget">
+						<h3 class="widget-title">New Products</h3>
+						<div class="widget-body">
+							<div class="beta-sales beta-lists">
+								</div>
+						</div>
+					</div> </div>
+			</div>
+		</div> </div> <div id="footer">
+		</div> <div class="copyright">
+		</div> <script src="/assets/dest/js/jquery.js"></script>
+	<script src="/assets/dest/vendors/jqueryui/jquery-ui-1.10.4.custom.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<script src="/assets/dest/vendors/bxslider/jquery.bxslider.min.js"></script>
+	<script src="/assets/dest/vendors/colorbox/jquery.colorbox-min.js"></script>
+	<script src="/assets/dest/vendors/animo/Animo.js"></script>
+	<script src="/assets/dest/vendors/dug/dug.js"></script>
+	<script src="/assets/dest/js/scripts.min.js"></script>
+</body>
+</html>

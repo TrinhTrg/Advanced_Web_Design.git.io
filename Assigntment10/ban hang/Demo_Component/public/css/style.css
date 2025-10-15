@@ -1,0 +1,20 @@
+#header {font-family:'Segoe UI','Roboto',Arial,sans-serif;}
+.header-top {background:#fcfcff;border-bottom:1px solid #eee;color:#112;padding:4px 0;font-size:15px;}
+.header-top .top-menu li, .header-top .top-details li {padding-right:18px;line-height:24px;}
+.header-top a {color:#2673dd;text-decoration:none;}
+.header-top a:hover {text-decoration:underline;}
+.header-body {background:#fff;padding:22px 0 0 0;}
+.header-logo img {max-height:62px;}
+.header-bottom {background:#227bca!important;border-top:1px solid #cbdef8;box-shadow:0 2px 8px rgba(30,80,180,.03);}
+.main-menu ul, .main-menu {margin:0;padding:0;background:none!important;}
+.main-menu > ul > li > a {color:#fff;padding:8px 18px;border-radius:6px;transition:background .18s;}
+.main-menu > ul > li > a:hover, .main-menu > ul > li.active > a {background:#165b92;color:#fff;}
+.sub-menu {background:#f6faff;padding:8px 0;box-shadow:0 2px 8px #c8daee21;margin-top:10px;}
+.sub-menu li a {color:#235c92;}
+.beta-btn.primary {background:#2673dd;color:#fff;}
+.beta-btn.primary:hover {background:#165b92;}
+.beta-btn {border-radius:7px;background:#eaf2fc;color:#2673dd;}
+.beta-select {background:#eaf2fc;color:#2673dd;border-radius:7px;}
+.cart .cart-body {background:#fff;border:1px solid #e5e9f2;box-shadow:0 1.5px 3px #e7eef9;}
+@media(max-width:900px){.header-body .beta-relative{flex-wrap:wrap;}}
+@media(max-width:640px){#header .header-top,#header .header-body,#header .header-bottom{padding:7px 0;}.main-menu > ul>li>a{padding:6px 8px;}}
