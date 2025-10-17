@@ -1,0 +1,43 @@
+
+
+<div class="container mt-4">
+  <div class="card shadow-sm p-4">
+    <h3 class="text-center mb-4">✏️ Chỉnh sửa sản phẩm</h3>
+
+    <form action="/admin/edit/<%= product.id %>" method="POST" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label">Tên sản phẩm</label>
+        <input type="text" name="name" value="<%= product.name %>" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Giá</label>
+        <input type="number" name="price" value="<%= product.price %>" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Ảnh hiện tại</label><br>
+        <% if (product.imageUrl) { %>
+          <img src="/uploads/<%= product.imageUrl %>" width="120" class="rounded shadow-sm mb-2">
+        <% } else { %>
+          <p class="text-muted">Chưa có ảnh</p>
+        <% } %>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Chọn ảnh mới (nếu muốn đổi)</label>
+        <input type="file" name="imageUrl" class="form-control">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Mô tả</label>
+        <textarea name="description" class="form-control" rows="3"><%= product.description %></textarea>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <a href="/admin" class="btn btn-secondary">⬅ Quay lại</a>
+        <button type="submit" class="btn btn-success">Cập nhật</button>
+      </div>
+    </form>
+  </div>
+</div>
