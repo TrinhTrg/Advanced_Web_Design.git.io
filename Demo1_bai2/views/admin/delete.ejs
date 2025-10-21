@@ -1,0 +1,15 @@
+<% products.forEach(product => { %>
+  <div class="card">
+    <h3><%= product.name %></h3>
+    <p>Giá: <%= product.price %></p>
+    <p><%= product.description %></p>
+    
+    <% if (product.image) { %>
+      <img src="/uploads/<%= product.image %>" alt="<%= product.name %>" width="100">
+    <% } %>
+
+    <form action="/delete/<%= product.id %>" method="POST" style="display:inline;">
+      <button type="submit" class="btn btn-danger">🗑 Xóa</button>
+    </form>
+  </div>
+<% }) %>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title || "Product Management" %></title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="/">My Store</a>
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/">Home</a>
+        <a class="nav-item nav-link" href="/create">Add Product</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Đây là nơi nội dung riêng của từng trang được chèn vào -->
+    <%- body %>
+  </div>
+
+  <footer class="text-center mt-4 mb-3 text-muted">
+    <small>© 2025 Product Management App - TrinhTrg</small>
+  </footer>
+</body>
+</html>

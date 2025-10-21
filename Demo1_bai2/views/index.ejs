@@ -1,0 +1,28 @@
+<h1>Product List</h1>
+<a href="/create" class="btn btn-primary mb-3">Add Product</a>
+
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% products.forEach(product => { %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.price %></td>
+        <td><img src="/uploads/<%= product.image %>" width="100"></td>
+        <td><%= product.description %></td>
+        <td>
+          <a href="/edit/<%= product.id %>" class="btn btn-warning btn-sm">Edit</a>
+          <a href="/delete/<%= product.id %>" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
