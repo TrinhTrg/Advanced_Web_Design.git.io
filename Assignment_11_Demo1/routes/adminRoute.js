@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
     filename: (req, file, cb) => {
         cb(null, Date.now() + path.extname(file.originalname));
     }
-});
+}); 
 const upload = multer({ storage });
 // Route to display all product
 router.get('/', productController.getAllProducts);
