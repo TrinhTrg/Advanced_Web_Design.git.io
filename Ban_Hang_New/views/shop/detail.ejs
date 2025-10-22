@@ -1,0 +1,21 @@
+<div class="container my-5">
+  <div class="product-detail">
+    <% if (product.imageUrl) { %>
+      <img src="/uploads/<%= product.imageUrl %>" alt="<%= product.name %>">
+    <% } else { %>
+      <img src="https://via.placeholder.com/300x300?text=No+Image" alt="No image available">
+    <% } %>
+
+    <div class="product-info">
+      <h2><%= product.name %></h2>
+      <h4>💰 <%= product.price %> VNĐ</h4>
+      <p><%= product.description || 'Không có mô tả' %></p>
+
+      <form action="/cart/add/<%= product.id %>" method="POST">
+        <button type="submit" class="btn btn-success">🛒 Thêm vào giỏ hàng</button>
+      </form>
+
+      <a href="/shop" class="btn btn-outline-secondary">⬅ Quay lại cửa hàng</a>
+    </div>
+  </div>
+</div>

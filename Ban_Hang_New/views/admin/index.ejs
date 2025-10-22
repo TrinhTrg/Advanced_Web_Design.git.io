@@ -1,0 +1,47 @@
+<div class="container mt-5">
+  <h1 class="mb-4 text-center">📦 Danh sách sản phẩm</h1>
+
+  <div class="text-right mb-3">
+    <a href="/admin/create" class="btn btn-success">+ Thêm sản phẩm mới</a>
+  </div>
+
+  <table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá</th>
+        <th>Ảnh</th>
+        <th>Mô tả</th>
+        <th>Hành động</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (products.length > 0) { %>
+        <% products.forEach((product) => { %>
+          <tr>
+            <td><%= product.id %></td>
+            <td><%= product.name %></td>
+            <td><%= product.price %> ₫</td>
+            <td>
+              <% if (product.imageUrl) { %>
+                <img src="/uploads/<%= product.imageUrl %>" width="80" class="rounded">
+              <% } else { %>
+                <span class="text-muted">Không có ảnh</span>
+              <% } %>
+            </td>
+            <td><%= product.description || '—' %></td>
+            <td>
+              <a href="/admin/edit/<%= product.id %>" class="btn btn-warning btn-sm">✏️ Sửa</a>
+              <a href="/admin/delete/<%= product.id %>" class="btn btn-danger btn-sm">🗑️ Xóa</a>
+            </td>
+          </tr>
+        <% }) %>
+      <% } else { %>
+        <tr>
+          <td colspan="6" class="text-center text-muted">Chưa có sản phẩm nào</td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>

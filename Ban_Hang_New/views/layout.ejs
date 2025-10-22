@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- 🟩 NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success px-4">
+    <a class="navbar-brand fw-bold" href="/shop">🌿 MyShop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/shop">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/admin">Quản lý</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link position-relative" href="/cart">
+            <i class="bi bi-cart-fill fs-5"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              0
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 🧩 CONTENT -->
+  <main class="container mt-4">
+    <%- body %>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-light text-center py-3 mt-4">
+    &copy; 2025 My Shop. All rights reserved.
+  </footer>
+
+  <!-- JS (nếu cần) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
