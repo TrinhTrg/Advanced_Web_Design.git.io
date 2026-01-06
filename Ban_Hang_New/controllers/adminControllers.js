@@ -35,12 +35,10 @@ exports.getAllProducts = async (req, res) => {
   }
 };
 
-// 🟩 Hiển thị form thêm
 exports.showCreateForm = (req, res) => {
   res.render('admin/create', { title: 'Thêm sản phẩm mới' });
 };
 
-// 🟩 Thêm sản phẩm mới
 exports.create = async (req, res) => {
   try {
     const { name, price, description } = req.body;
@@ -59,7 +57,7 @@ exports.create = async (req, res) => {
   }
 };
 
-// 🟨 Hiển thị form chỉnh sửa
+// Lấy  form chỉnh sửa
 exports.edit = async (req, res) => {
   try {
     const product = await Product.findByPk(req.params.id);
